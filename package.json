@@ -2,9 +2,11 @@
   "name": "svg-to-png",
   "type": "module",
   "scripts": {
-    "dev": "vite --open",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
+    "dev": "bun node_modules/vite/bin/vite.js --open",
+    "build": "bun node_modules/typescript/bin/tsc --noEmit && bun node_modules/vite/bin/vite.js build",
+    "preview": "bun node_modules/vite/bin/vite.js preview",
+    "serve": "bun run server.ts",
+    "compile": "bun run build && bun build ./server.ts --outfile svg-to-png-server --compile --target=bun",
     "lint": "eslint . --fix && prettier **/*.{tsx,ts,css,module.css,html,md,json,yaml} --write --no-error-on-unmatched-pattern"
   },
   "dependencies": {
