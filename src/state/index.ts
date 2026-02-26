@@ -170,6 +170,9 @@ images.onMount = () => {
 /** flag to edit all images together */
 export const editAll = atomWithStorage("edit-all", false);
 
+/** UI theme: light or dark */
+export const theme = atomWithStorage<"light" | "dark">("theme", "light");
+
 /** available icon-set sizes */
 export const ICON_SET_SIZES = [16, 32, 48, 64, 96, 128, 256, 512] as const;
 
